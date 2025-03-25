@@ -1,6 +1,7 @@
 import "../scss/App.scss";
 import { useState } from "react";
 import Header from "./Header";
+import Board from "./Board";
 
 function App() {
   const [groguPosition, setGroguPosition] = useState(0);
@@ -14,18 +15,7 @@ function App() {
     <div className="page">
       <Header />
       <main className="main">
-        <section className="board">
-          <div className="cell">
-            <div className="grogu">👣</div>
-          </div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-          <div className="cell"></div>
-        </section>
-
+        <Board />
         <section>
           <button className="dice">Lanzar Dado</button>
           <div className="game-status">En curso</div>

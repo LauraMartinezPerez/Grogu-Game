@@ -14,15 +14,20 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 70px;
     height: 100%;
     color: #fff;
 }
 
 .main {
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
 }
 
-.gitrd {
+.board {
     display: flex;
     justify-content: center;
     padding: 20px;
