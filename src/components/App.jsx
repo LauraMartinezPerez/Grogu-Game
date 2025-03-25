@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="page">
       <header>
-        <h1>¡Cuidado con Grogu ewnfpw!</h1>
+        <h1>¡Cuidado con Grogu!</h1>
       </header>
       <main className="main">
         <section className="board">
