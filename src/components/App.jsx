@@ -11,15 +11,30 @@ function App() {
   const [diceValue, setDiceValue] = useState(null);
   const [gameStatus, setGameStatus] = useState("En curso");
 
-  function rollDice() {
-    function getRandomNumber(max) {
-      return Math.ceil(Math.random() * max);
-    }
-    const randomNumber = getRandomNumber(4);
-    console.log(randomNumber);
+const randomNumber = (max) => {
+  return Math.floor(Math.random() * max) + 1;
+};
 
-    let attemps = 0;
+
+const rollDice = () => {
+  const getRandomNumber = randomNumber(4);
+  setDiceValue(getRandomNumber);
+
+  if (getRandomNumber === 4) {
+      setGroguPosition(groguPosition + 1);
+      setGameStatus("¡¡¡Cuidado!!! Grogu avanza una casilla");
+  } else if (getRandomNumber === 1) {
+      setGoodsCookies(goodsCookies.slice(1));
+      setGameStatus("Has ayudado a Mando a recoger una galleta");
+  } else if (getRandomNumber === 2) {
+    setGoodsEggs(goodsEggs.slice(1));
+    setGameStatus("Has ayudado a Mando a recoger un huevo");
+  } else {
+    setGoodsFrog(goodsFrog.slice(1));
+    setGameStatus("Has ayudado a Mando a recoger una rana");
   }
+}
+
 
   return (
     <div className="page">
@@ -28,22 +43,25 @@ function App() {
         <Board />
         <section>
           <button className="dice" onClick={rollDice}>
-            Lanzar Dado
+            Lanzar Dado {diceValue}
           </button>
-          <div className="game-status">En curso</div>
+          <div className="game-status">{gameStatus}</div>
         </section>
 
         <section className="goods-container">
+          <p>galletas {goodsCookies}</p>
           <div className="goods-item">🍪</div>
           <div className="goods-item">🍪</div>
           <div className="goods-item">🍪</div>
         </section>
         <section className="goods-container">
+        <p>huevos {goodsEggs}</p>
           <div className="goods-item">🥚</div>
           <div className="goods-item">🥚</div>
           <div className="goods-item">🥚</div>
         </section>
         <section className="goods-container">
+        <p>ranas {goodsFrog}</p>
           <div className="goods-item">🐸</div>
           <div className="goods-item">🐸</div>
           <div className="goods-item">🐸</div>
