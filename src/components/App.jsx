@@ -11,13 +11,25 @@ function App() {
   const [diceValue, setDiceValue] = useState(null);
   const [gameStatus, setGameStatus] = useState("En curso");
 
+  function rollDice() {
+    function getRandomNumber(max) {
+      return Math.ceil(Math.random() * max);
+    }
+    const randomNumber = getRandomNumber(4);
+    console.log(randomNumber);
+
+    let attemps = 0;
+  }
+
   return (
     <div className="page">
       <Header />
       <main className="main">
         <Board />
         <section>
-          <button className="dice">Lanzar Dado</button>
+          <button className="dice" onClick={rollDice}>
+            Lanzar Dado
+          </button>
           <div className="game-status">En curso</div>
         </section>
 
