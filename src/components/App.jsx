@@ -1,11 +1,18 @@
 import "../scss/App.scss";
+import { useState } from "react";
+import Header from "./Header";
 
 function App() {
+  const [groguPosition, setGroguPosition] = useState(0);
+  const [goodsCookies, setGoodsCookies] = useState(["🍪", "🍪", "🍪"]);
+  const [goodsEggs, setGoodsEggs] = useState(["🥚", "🥚", "🥚"]);
+  const [goodsFrog, setGoodsFrog] = useState(["🐸", "🐸", "🐸"]);
+  const [diceValue, setDiceValue] = useState(null);
+  const [gameStatus, setGameStatus] = useState("En curso");
+
   return (
     <div className="page">
-      <header>
-        <h1>¡Cuidado con Grogu ewnfpw!</h1>
-      </header>
+      <Header />
       <main className="main">
         <section className="board">
           <div className="cell">
