@@ -2,6 +2,7 @@ import "../scss/App.scss";
 import { useState } from "react";
 import Header from "./Header";
 import Board from "./Board";
+import Dice from "./Dice";
 
 function App() {
   const [groguPosition, setGroguPosition] = useState(0);
@@ -17,6 +18,7 @@ const randomNumber = (max) => {
 
 
 const rollDice = () => {
+  console.log("Esta Ok");
   const getRandomNumber = randomNumber(4);
   setDiceValue(getRandomNumber);
 
@@ -42,12 +44,10 @@ const rollDice = () => {
       <main className="main">
         <Board />
         <section>
-          <button className="dice" onClick={rollDice}>
-            Lanzar Dado {diceValue}
-          </button>
+          <Dice onRollDice={rollDice} />
+         
           <div className="game-status">{gameStatus}</div>
         </section>
-
         <section className="goods-container">
           <div className="goods-item">{goodsCookies}</div>
         </section>
