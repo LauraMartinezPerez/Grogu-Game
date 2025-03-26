@@ -49,22 +49,13 @@ const rollDice = () => {
         </section>
 
         <section className="goods-container">
-          <p>galletas {goodsCookies}</p>
-          <div className="goods-item">🍪</div>
-          <div className="goods-item">🍪</div>
-          <div className="goods-item">🍪</div>
+          <div className="goods-item">{goodsCookies}</div>
         </section>
         <section className="goods-container">
-        <p>huevos {goodsEggs}</p>
-          <div className="goods-item">🥚</div>
-          <div className="goods-item">🥚</div>
-          <div className="goods-item">🥚</div>
+          <div className="goods-item">{goodsEggs}</div>
         </section>
         <section className="goods-container">
-        <p>ranas {goodsFrog}</p>
-          <div className="goods-item">🐸</div>
-          <div className="goods-item">🐸</div>
-          <div className="goods-item">🐸</div>
+          <div className="goods-item">{goodsFrog}</div>
         </section>
         <section>
           <button className="restart-button">Reiniciar Juego</button>
