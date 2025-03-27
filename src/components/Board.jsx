@@ -1,13 +1,13 @@
-import { array } from "prop-types";
+//import { array } from "prop-types";
 import Grogu from "./Grogu";
 
 const Board = () => {
   return (
     <section className="board">
       <Grogu />
-      <div className="cell"></div>
-      {Array(7).fill().map}
+      {Array(7).fill(<div className="cell"></div>).map}
     </section>
   );
 };
+console.log(Board());
 export default Board;
