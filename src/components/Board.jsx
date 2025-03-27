@@ -1,3 +1,4 @@
+import { array } from "prop-types";
 import Grogu from "./Grogu";
 
 const Board = () => {
@@ -5,11 +6,7 @@ const Board = () => {
     <section className="board">
       <Grogu />
       <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
+      {Array(7).fill().map}
     </section>
   );
 };
