@@ -18,13 +18,13 @@ const randomNumber = (max) => {
 
 
 const rollDice = () => {
-  console.log("Esta Ok");
+  
   const getRandomNumber = randomNumber(4);
   setDiceValue(getRandomNumber);
 
   if (getRandomNumber === 4) {
       setGroguPosition(groguPosition + 1);
-      setGameStatus("¡¡¡Cuidado!!! Grogu avanza una casilla");
+      setGameStatus("¡¡¡Cuidado, Grogu avanza una casilla!!!");
   } else if (getRandomNumber === 1) {
       setGoodsCookies(goodsCookies.slice(1));
       setGameStatus("Has ayudado a Mando a recoger una galleta");
@@ -34,18 +34,19 @@ const rollDice = () => {
   } else {
     setGoodsFrog(goodsFrog.slice(1));
     setGameStatus("Has ayudado a Mando a recoger una rana");
-  }
-}
+  } 
+
+} 
 
 
   return (
     <div className="page">
       <Header />
       <main className="main">
-        <Board />
-        <section>
-          <Dice onRollDice={rollDice} />
-         
+        <Board onGroguPosition={groguPosition}/>
+        <section className="diceSection"> 
+          <Dice className="dice" onRollDice={rollDice}/>
+         <p>{diceValue}</p>
           <div className="game-status">{gameStatus}</div>
         </section>
         <section className="goods-container">

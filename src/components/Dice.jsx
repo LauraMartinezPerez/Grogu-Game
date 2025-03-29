@@ -5,7 +5,6 @@ const Dice = (props) => {
         props.onRollDice();
 
     }
-    
 
     return (
         <button className="dice" onClick={handleClick}>

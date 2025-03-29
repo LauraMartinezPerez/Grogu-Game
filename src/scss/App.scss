@@ -58,12 +58,22 @@ html {
     }
 }
 
+.diceSection {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .dice {
     background-color: #fff;
+    font-size: 16px;
     border: 2px solid #000;
     padding: 10px;
     cursor: pointer;
     font-weight: bold;
+    width: 150px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -75,7 +85,8 @@ html {
 }
 
 .game-status {
-    font-size: 18px;
+    text-align: center;
+    font-size: 22px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000;
     margin-bottom: 10px;
@@ -105,7 +116,7 @@ html {
 }
 
 .goods-item {
-    font-size: 30px;
+    font-size: 50px;
     margin: 0 10px;
 }
 
