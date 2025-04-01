@@ -1,6 +1,7 @@
 {
   "name": "leccion-01-mi-primera-web-en-react",
   "private": true,
+  "homepage":"./",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -13,6 +14,7 @@
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.1",
     "sass": "^1.86.0"
   },
   "devDependencies": {
