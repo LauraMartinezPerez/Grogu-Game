@@ -17,12 +17,15 @@ const randomNumber = (max) => {
 };
 
 useEffect(() => {
-  if (goodsCookies.length === 0 && goodsEggs.length === 0 && goodsFrog.length === 0) {
-    setGameStatus("¡¡¡Ganaste, Mando completa la misión!!!");
-  } 
-/*   else if (groguPosition === 6) {
+if (groguPosition === 6) {
     setGameStatus("¡¡¡Has perdido, Grogu se ha comido el cargamento!!!");
-  }  else if (goodsCookies.length === 0) {
+  }  else if (goodsCookies.length === 0 && goodsEggs.length === 0 && goodsFrog.length === 0) {
+    setGameStatus("¡¡¡Ganaste, Mando completa la misión!!!");
+  }  
+/*  if (goodsCookies.length === 0 && goodsEggs.length === 0 && goodsFrog.length === 0) {
+    setGameStatus("¡¡¡Ganaste, Mando completa la misión!!!");
+
+else if (goodsCookies.length === 0) {
     setGameStatus("Te has comido todas las galletas, glotona!!!")
 
   }  else if (goodsEggs.length === 0) {
@@ -30,7 +33,8 @@ useEffect(() => {
   }
      else if (goodsFrog.length === 0) {
     setGameStatus("Te has comido todas las ranas, glotona!!!")
-  }  */
+  }   */
+
 
 }, [groguPosition, goodsCookies, goodsEggs, goodsFrog ]);
 
