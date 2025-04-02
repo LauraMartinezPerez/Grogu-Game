@@ -12,21 +12,12 @@ const Footer = () => {
             </a>
           </li>
           <li className="footer__menu-item">
-            <link
-              to="/instructions"
-              className="footer__menu-link active"
-              rel="stylesheet"
-            >
-              {" "}
-              Instrucciones{" "}
-            </link>
+            <Link to="/instructions" className="footer__menu-link active">Instrucciones{" "}</Link>
           </li>
         </ul>
       </nav>
       <small className="footer__copy">© Adalab</small>
     </footer>
-    /* <link rel="stylesheet" href="styles.css" />
-     */
   );
 };
 export default Footer;

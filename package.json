@@ -1,7 +1,7 @@
 {
   "name": "leccion-01-mi-primera-web-en-react",
   "private": true,
-  "homepage":"./",
+  "homepage": "./",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
