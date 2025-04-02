@@ -67,26 +67,32 @@ else if (goodsCookies.length === 0) {
       <Header />
       <main className="main">
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Board onGroguPosition={groguPosition} />
+                <section className="diceSection">
+                  <Dice className="dice" onRollDice={rollDice} />
+                  <p>{diceValue}</p>
+                  <div className="game-status">{gameStatus}</div>
+                </section>
+                <section className="goods-container">
+                  <div className="goods-item">{goodsCookies}</div>
+                </section>
+                <section className="goods-container">
+                  <div className="goods-item">{goodsEggs}</div>
+                </section>
+                <section className="goods-container">
+                  <div className="goods-item">{goodsFrog}</div>
+                </section>
+                <section>
+                  <button className="restart-button">Reiniciar Juego</button>
+                </section>
+              </>
+            }
+          />
           <Route path="/Instructions" element={<Instructions />} />
-          <Board onGroguPosition={groguPosition} />
-          <section className="diceSection">
-            <Dice className="dice" onRollDice={rollDice} />
-            <p>{diceValue}</p>
-            <div className="game-status">{gameStatus}</div>
-          </section>
-          <section className="goods-container">
-            <div className="goods-item">{goodsCookies}</div>
-          </section>
-          <section className="goods-container">
-            <div className="goods-item">{goodsEggs}</div>
-          </section>
-          <section className="goods-container">
-            <div className="goods-item">{goodsFrog}</div>
-          </section>
-          <section>
-            <button className="restart-button">Reiniciar Juego</button>
-          </section>
         </Routes>
       </main>
       <Footer />
